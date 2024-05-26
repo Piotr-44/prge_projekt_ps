@@ -1,0 +1,149 @@
+.services {
+  position: absolute;
+  width: 458px;
+  height: 77px;
+  left: 237px;
+  top: 84px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+}
+
+.btn_map {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: 199px;
+  top: 273px;
+}
+.btn_map:hover {
+  border: 5px solid black;
+}
+.btn_hospitals {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: 488px;
+  top: 273px;
+}
+.btn_hospitals:hover {
+  border: 5px solid black;
+}
+.btn_incidents {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: 199px;
+  top: 600px;
+}
+.btn_incidents:hover {
+  border: 5px solid black;
+}
+
+.btn_employees {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: 488px;
+  top: 600px;
+}
+.btn_employees:hover {
+  border: 5px solid black;
+}
+
+.maps {
+  position: absolute;
+  width: 90px;
+  height: 43px;
+  left: 277px;
+  top: 540px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.hospitals {
+  position: absolute;
+  width: 271px;
+  height: 43px;
+  left: 475px;
+  top: 540px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.incidents {
+  position: absolute;
+  width: 169px;
+  height: 43px;
+  left: 244px;
+  top: 867px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.employees {
+  position: absolute;
+  width: 182px;
+  height: 43px;
+  left: 524px;
+  top: 867px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.mazovia_img {
+  position: absolute;
+  width: 701px;
+  height: 708px;
+  left: 903px;
+  top: 202px;
+}
+
+.return {
+  position: absolute;
+  width: 300px;
+  height: 90px;
+  left: 1507px;
+  top: 820px;
+  background-color: #ff3e3e;
+  font-family: "Lato";
+  font-size: 36px;
+  color: #ffffff;
+  border-radius: 7px;
+}
+
+.return:hover {
+  background-color: red;
+  color: black;
+  font-weight: bolder;
+  border-color: rgba(39, 108, 211, 0.5);
+}

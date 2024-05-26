@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+.title {
+  position: absolute;
+  width: 1106px;
+  height: 263px;
+  left: 814px;
+  top: 155px;
+  text-align: left;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 115px;
+
+  color: #000000;
+}
+
+.subtitle {
+  /* Strona internetowa z interaktywną mapą stacji pogotowia, incydentów oraz pracowników. */
+  text-align: left;
+  position: absolute;
+  width: 847px;
+  height: 96px;
+  left: 973px;
+  top: 540px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+.about {
+  /* O portalu */
+
+  position: absolute;
+  width: 152px;
+  height: 43px;
+  left: 1668px;
+  top: 21px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.ambulance {
+  position: absolute;
+  left: 50px;
+  top: 190px;
+}
+
+.btn {
+  /* button */
+
+  position: absolute;
+  width: 300px;
+  height: 90px;
+  left: 1520px;
+  top: 760px;
+  background-color: #ff3e3e;
+  font-family: "Lato";
+  font-size: 36px;
+  color: #ffffff;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: red;
+  color: black;
+  font-weight: bolder;
+  border-color: rgba(39, 108, 211, 0.5);
+}
+
+.backgr {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffc150 0%,
+    #fae6c3 50.5%,
+    #ffa500 100%
+  );
+  border: 1px solid #000000;
+}
