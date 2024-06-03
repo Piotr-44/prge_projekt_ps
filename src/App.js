@@ -7,6 +7,7 @@ import Map_employee from "./components/map_employees/Map_employee";
 import Station_list from "./components/dashboard_med_station_list/Station_list";
 import Incident_list from "./components/dashboard_incidents_list/Incident_list";
 import Employee_list from "./components/dashboard_employees_list/Employee_list";
+import About from "./components/about/About";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import React from "react";
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard_employees_list",
     element: <Employee_list />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

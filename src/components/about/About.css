@@ -1,0 +1,31 @@
+.about_title {
+  position: absolute;
+  width: 269px;
+  height: 77px;
+  left: 190px;
+  top: 35px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+}
+
+.portal_details {
+  position: absolute;
+  width: 1400px;
+  height: 2327px;
+  left: 260px;
+  top: 176px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}

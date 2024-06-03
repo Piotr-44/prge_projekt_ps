@@ -14,7 +14,9 @@ function Home() {
             Strona internetowa z interaktywną mapą stacji pogotowia, incydentów
             oraz pracowników.
           </div>
-          <div className="about">O portalu</div>
+          <Link to="/about">
+            <div className="about">O portalu</div>
+          </Link>
           <Link to="/services">
             <button className="btn">START</button>
           </Link>
