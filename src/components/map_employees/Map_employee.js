@@ -9,6 +9,7 @@ import "./Map_employee.css";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import Btn_employee_list from "../tmp/list.png";
+import { Link } from "react-router-dom";
 
 function Map_employee() {
   useEffect(() => {
@@ -41,7 +42,9 @@ function Map_employee() {
           </LayersControl.BaseLayer>
         </LayersControl>
       </MapContainer>
-      <img className="employee_list_icon" src={Btn_employee_list}></img>
+      <Link to="/dashboard_employees_list">
+        <img className="employee_list_icon" src={Btn_employee_list}></img>
+      </Link>
     </div>
   );
 }

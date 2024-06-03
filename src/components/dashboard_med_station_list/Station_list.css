@@ -1,0 +1,26 @@
+.station_list_title {
+  position: absolute;
+  width: 586px;
+  height: 77px;
+  left: 190px;
+  top: 35px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  color: #000000;
+}
+
+.btn_map_from_list {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -75px;
+  top: 32px;
+}
+
+.btn_map_from_list:hover {
+  background: radial-gradient(circle, #ffffff 20%, transparent 75%);
+}
