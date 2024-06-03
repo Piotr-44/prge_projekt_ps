@@ -29,3 +29,91 @@
 
   color: #000000;
 }
+
+.maps_subtitle_1 {
+  position: absolute;
+  width: 443px;
+  height: 43px;
+  left: 350px;
+  top: 260px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.maps_subtitle_2 {
+  position: absolute;
+  width: 426px;
+  height: 43px;
+  left: 350px;
+  top: 540px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+
+  color: #000000;
+}
+
+.btn_map1 {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: -300px;
+  top: -100px;
+}
+
+.btn_map1:hover {
+  border: 5px solid black;
+}
+
+.btn_map2 {
+  position: absolute;
+  width: 245px;
+  height: 250px;
+  left: -300px;
+  top: -100px;
+}
+
+.btn_map2:hover {
+  border: 5px solid black;
+}
+
+.ambulans {
+  position: absolute;
+  width: 649px;
+  height: 430px;
+  left: 1153px;
+  top: 174px;
+  mix-blend-mode: darken;
+  opacity: 0.85;
+}
+
+.paramedic {
+  position: absolute;
+  width: 649.43px;
+  height: 430px;
+  left: 1153px;
+  top: 626px;
+
+  mix-blend-mode: darken;
+}
+
+.services_icon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 10px;
+  top: 30px;
+}
+
+.services_icon:hover {
+  background: radial-gradient(circle, #ffffff 20%, transparent 75%);
+}

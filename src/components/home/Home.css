@@ -17,7 +17,6 @@
 }
 
 .subtitle {
-  /* Strona internetowa z interaktywną mapą stacji pogotowia, incydentów oraz pracowników. */
   text-align: left;
   position: absolute;
   width: 847px;
@@ -90,4 +89,20 @@
     #ffa500 100%
   );
   border: 1px solid #000000;
+}
+
+.services_return {
+  position: absolute;
+  width: 90px;
+  height: 27px;
+  left: 1722px;
+  top: 58px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
 }
