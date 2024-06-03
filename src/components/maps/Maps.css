@@ -1,0 +1,31 @@
+.backgr {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffc150 0%,
+    #fae6c3 50.5%,
+    #ffa500 100%
+  );
+  border: 1px solid #000000;
+}
+
+.maps_title {
+  position: absolute;
+  width: 592px;
+  height: 77px;
+  left: 237px;
+  top: 75px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+}

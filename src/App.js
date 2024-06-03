@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./components/home/Home";
 import Services from "./components/services/Services";
+import Maps from "./components/maps/Maps";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import React from "react";
 
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <Services />,
+  },
+  {
+    path: "/maps",
+    element: <Maps />,
   },
 ]);
 

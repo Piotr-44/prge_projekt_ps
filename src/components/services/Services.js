@@ -12,7 +12,9 @@ function Services() {
     <div>
       <div className="backgr"></div>
       <div className="services">Dostępne usługi</div>
-      <img className="btn_map" src={Btn_map} btn_map></img>
+      <Link to="/maps">
+        <img className="btn_map" src={Btn_map} btn_map></img>
+      </Link>
       <img className="btn_hospitals" src={Btn_hospitals} btn_map></img>
       <img className="btn_incidents" src={Btn_incidents} btn_map></img>
       <img className="btn_employees" src={Btn_employees} btn_map></img>
