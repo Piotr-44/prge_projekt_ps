@@ -9,6 +9,7 @@ import "./Map_med.css";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import Btn_station_list from "../tmp/list.png";
+import { Link } from "react-router-dom";
 
 function Map_med() {
   useEffect(() => {
@@ -41,7 +42,9 @@ function Map_med() {
           </LayersControl.BaseLayer>
         </LayersControl>
       </MapContainer>
-      <img className="station_list_icon" src={Btn_station_list}></img>
+      <Link to="/dashboard_med_station_list">
+        <img className="station_list_icon" src={Btn_station_list}></img>
+      </Link>
     </div>
   );
 }

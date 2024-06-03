@@ -1,0 +1,27 @@
+.incident_list_title {
+  position: absolute;
+  width: 503px;
+  height: 77px;
+  left: 190px;
+  top: 35px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+}
+
+.btn_employee_pics {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: -165px;
+  top: 35px;
+}
+
+.btn_employee_pics:hover {
+  background: radial-gradient(circle, #ffffff 20%, transparent 75%);
+}

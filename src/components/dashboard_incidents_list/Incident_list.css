@@ -1,0 +1,16 @@
+.incident_list_title {
+  position: absolute;
+  width: 817px;
+  height: 77px;
+  left: 190px;
+  top: 35px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+
+  color: #000000;
+  white-space: nowrap;
+}

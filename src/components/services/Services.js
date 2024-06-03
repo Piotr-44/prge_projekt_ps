@@ -15,9 +15,15 @@ function Services() {
         <Link to="/maps">
           <img className="btn_map" src={Btn_map} btn_map></img>
         </Link>
-        <img className="btn_hospitals" src={Btn_hospitals} btn_map></img>
-        <img className="btn_incidents" src={Btn_incidents} btn_map></img>
-        <img className="btn_employees" src={Btn_employees} btn_map></img>
+        <Link to="/dashboard_med_station_list">
+          <img className="btn_hospitals" src={Btn_hospitals} btn_map></img>
+        </Link>
+        <Link to="/dashboard_incidents_list">
+          <img className="btn_incidents" src={Btn_incidents} btn_map></img>
+        </Link>
+        <Link to="/dashboard_employees_list">
+          <img className="btn_employees" src={Btn_employees} btn_map></img>
+        </Link>
         <div className="maps">Mapy</div>
         <div className="hospitals">Stacje pogotowia</div>
         <div className="incidents">Zgłoszenia</div>
