@@ -49,6 +49,11 @@
   color: #000000;
 }
 
+.about:hover {
+  color: #000000;
+  text-shadow: 2px 2px 8px #ffffff;
+}
+
 .ambulance {
   position: absolute;
   left: 50px;
