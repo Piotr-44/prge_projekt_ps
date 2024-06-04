@@ -18,7 +18,10 @@ function Employee_list() {
           <Link to="/map_employees">
             <img className="btn_map_from_list" src={Map_icon}></img>
           </Link>
-          <img className="btn_employee_pics" src={Window_icon}></img>
+          <Link to="/dashboard_employees_view">
+            <img className="btn_employee_pics" src={Window_icon}></img>
+          </Link>
+          <div className="table_emplotyees"></div>
         </div>
       </div>
     </div>
