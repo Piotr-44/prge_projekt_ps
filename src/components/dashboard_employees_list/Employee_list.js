@@ -21,7 +21,7 @@ function Employee_list() {
           <Link to="/dashboard_employees_view">
             <img className="btn_employee_pics" src={Window_icon}></img>
           </Link>
-          <div className="table_emplotyees"></div>
+          {/* <div className="table_employees"></div> NA TABELE Z DANYMI */}
         </div>
       </div>
     </div>

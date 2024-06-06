@@ -1,5 +1,10 @@
 import React from "react";
 import ActionAreaCard from "./Mcard";
+import "./View_employee.css";
+import Map_icon from "../tmp/map_button_img.png";
+import Services_icon from "../tmp/services_shortcut.png";
+import Btn_employee_list from "../tmp/list.png";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const input_list = [
@@ -63,7 +68,21 @@ function Dashboard() {
 
   return (
     <div>
-      <div className="backgr">
+      <div className="backgr2">
+        <div className="employee_view_title">Pracownicy stacji pogotowia</div>
+        <div className="services_return2">
+          USŁUGI
+          <Link to="/services">
+            <img className="services_icon2" src={Services_icon}></img>
+          </Link>
+          <Link to="/map_employees">
+            <img className="btn_map_from_list2" src={Map_icon}></img>
+          </Link>
+          <Link to="/dashboard_employees_list">
+            <img className="employee_list_icon2" src={Btn_employee_list}></img>
+          </Link>
+        </div>
+
         {input_list.map((item) => {
           return (
             <ActionAreaCard
