@@ -3,23 +3,38 @@ import {
   LayersControl,
   MapContainer,
   TileLayer,
-  WMSTileLayer,
   GeoJSON,
+  useMapEvent,
 } from "react-leaflet";
 import "./Map_employee.css";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import Btn_employee_list from "../tmp/list.png";
 import { Link } from "react-router-dom";
-// import MarkerPlacement from "./MarkerPlacement";
+import L from "leaflet";
+import docIconImage from "../tmp/doc_icon.png";
 
-function Map_employee() {
+// Definiowanie niestandardowej ikony
+const docIcon = new L.Icon({
+  iconUrl: docIconImage,
+  iconSize: [20, 27],
+  iconAnchor: [0, 0],
+  popupAnchor: [10, 0],
+  shadowSize: [41, 41],
+});
+
+function MapEmployee() {
   const [pracownicy, setPracownicy] = useState(null);
 
   const makePopup = (feature, layer) => {
     if (feature.properties) {
       console.log(feature.properties);
-      layer.bindPopup();
+      layer.bindPopup(
+        `<strong1>Imię: ${feature.properties.imie}<br>
+         Nazwisko: ${feature.properties.nazwisko}</strong1><br>
+        <strong2>Funkcja: ${feature.properties.funkcja}</strong2><br>
+        <strong2>Adres: ${feature.properties.lokalizacja}</strong2>`
+      );
     }
   };
 
@@ -28,7 +43,6 @@ function Map_employee() {
       axios
         .get(
           "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Apracownicy&maxFeatures=50&outputFormat=application%2Fjson"
-          // "https://jsonplaceholder.typicode.com/posts/1"
         )
         .then((dane) => {
           console.log(dane);
@@ -38,9 +52,23 @@ function Map_employee() {
     getData();
   }, []);
 
+  function MarkerPlacement() {
+    const [position, setPosition] = useState(null);
+
+    useMapEvent({
+      click: (e) => {
+        setPosition(e.latlng); // Ustawienie pozycji markera na kliknięcie mapy
+      },
+    });
+  }
+
   return (
     <div>
-      <MapContainer center={[52.232222, 21.0]} zoom={9}>
+      <MapContainer
+        center={[52.232222, 21.0]}
+        zoom={11}
+        style={{ height: "100vh", width: "100%" }}
+      >
         <LayersControl>
           <LayersControl.BaseLayer checked name="OSM">
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -51,21 +79,21 @@ function Map_employee() {
           <LayersControl.BaseLayer name="OpenTopoMap">
             <TileLayer url="https://tile.opentopomap.org/{z}/{x}/{y}.png" />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Pracownicy">
-            <WMSTileLayer
-              layers="pracownicy"
-              url="http://127.0.0.1:8080/geoserver/prge/wms"
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.Overlay name="Pracownicy WFS">
+          <LayersControl.Overlay checked name="Pracownicy WFS">
             {pracownicy ? (
-              <GeoJSON data={pracownicy} onEachFeature={makePopup} />
+              <GeoJSON
+                data={pracownicy}
+                onEachFeature={makePopup}
+                pointToLayer={(feature, latlng) => {
+                  return L.marker(latlng, { icon: docIcon });
+                }}
+              />
             ) : (
               ""
             )}
           </LayersControl.Overlay>
-          {/* <MarkerPlacement /> */}
         </LayersControl>
+        <MarkerPlacement />
       </MapContainer>
       <Link to="/dashboard_employees_list">
         <img className="employee_list_icon" src={Btn_employee_list}></img>
@@ -74,4 +102,4 @@ function Map_employee() {
   );
 }
 
-export default Map_employee;
+export default MapEmployee;
