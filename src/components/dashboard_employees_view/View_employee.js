@@ -93,7 +93,7 @@ function Dashboard() {
             />
           );
         })}
-        <ActionAreaCard />
+        {/* <ActionAreaCard /> */}
       </div>
     </div>
   );
