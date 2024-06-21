@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 
 function Map_med() {
   useEffect(() => {
-    console.log("aa");
     const getData = () => {
       axios
         .get(
@@ -29,7 +28,7 @@ function Map_med() {
 
   return (
     <div>
-      <MapContainer center={[52.232222, 21.0]} zoom={6}>
+      <MapContainer center={[52.232222, 21.0]} zoom={9}>
         <LayersControl>
           <LayersControl.BaseLayer checked name="OSM">
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
