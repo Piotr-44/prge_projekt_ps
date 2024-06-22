@@ -54,10 +54,11 @@
   text-shadow: 2px 2px 8px #ffffff;
 }
 
-.ambulance {
+.icon {
   position: absolute;
-  left: 50px;
-  top: 190px;
+  left: 200px;
+  top: 300px;
+  height: 550px;
 }
 
 .btn {
@@ -66,7 +67,7 @@
   height: 90px;
   left: 1520px;
   top: 760px;
-  background-color: #ff3e3e;
+  background-color: rgb(255, 62, 62);
   font-family: "Lato";
   font-size: 36px;
   color: #ffffff;
