@@ -8,10 +8,14 @@
   width: 45px;
   height: 50px;
   left: 1864px;
-  top: 110px;
+  top: 140px;
   z-index: 1000;
 }
 
 .station_list_icon:hover {
   background: radial-gradient(circle, #ffffff 20%, transparent 75%);
+}
+
+.btn_descript {
+  position: absolute;
 }

@@ -13,7 +13,7 @@ import Btn_station_list from "../tmp/list.png";
 import { Link } from "react-router-dom";
 import L from "leaflet";
 import stationIconImage from "../tmp/med_station.png";
-// import incidentIconImage from "../tmp/incident.png";
+import incidentIconImage from "../tmp/incident.png";
 
 const stationIcon = new L.Icon({
   iconUrl: stationIconImage,
@@ -23,44 +23,52 @@ const stationIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-// const incidentIcon = new L.Icon({
-//   iconUrl: incidentIconImage,
-//   iconSize: [25, 35],
-//   iconAnchor: [0, 0],
-//   popupAnchor: [13, 0],
-//   shadowSize: [41, 41],
-// });
+const incidentIcon = new L.Icon({
+  iconUrl: incidentIconImage,
+  iconSize: [25, 35],
+  iconAnchor: [0, -10],
+  popupAnchor: [13, 0],
+  shadowSize: [0, 0],
+});
 
 function Map_med() {
   const [stacje, setStacje] = useState(null);
+  const [incydenty, setIncydenty] = useState(null);
 
-  const makePopup = (feature, layer) => {
+  const makeStationPopup = (feature, layer) => {
     if (feature.properties) {
       console.log(feature.properties);
       layer.bindPopup(
-        `<strong1>Nazwa: ${feature.properties.nazwa}<br>
-      <strong2>Adres: ${feature.properties.lokalizacja}</strong2>`
+        `<strong1>Nazwa: ${feature.properties.nazwa}</strong1><br>
+      <strong1>Adres: ${feature.properties.lokalizacja}</strong1>`
       );
     }
-    // if (feature.properties) {
-    //   console.log(feature.properties);
-    //   layer.bindPopup(
-    //     `<strong1>Nazwa: ${feature.properties.nazwa}<br>
-    //   <strong2>Adres: ${feature.properties.lokalizacja}</strong2>`
-    //   );
-    // }
+  };
+
+  const makeIncidentPopup = (feature, layer) => {
+    if (feature.properties) {
+      layer.bindPopup(
+        `<strong1>Imię: ${feature.properties.imie}</strong1><br>
+        <strong1>Nazwisko: ${feature.properties.nazwisko}</strong1><br>
+        <strong1>Zdarzenie: ${feature.properties.incydent}</strong1><br>
+        <strong1>Adres: ${feature.properties.lokalizacja}</strong1>`
+      );
+    }
   };
 
   useEffect(() => {
-    const getData = () => {
-      axios
-        .get(
-          "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Astacje_pogotowia&maxFeatures=50&outputFormat=application%2Fjson"
-        )
-        .then((dane) => {
-          console.log(dane);
-          setStacje(dane.data);
-        });
+    const getData = async () => {
+      const stationResponse = await axios.get(
+        "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Astacje_pogotowia&maxFeatures=50&outputFormat=application%2Fjson"
+      );
+      console.log(stationResponse);
+      setStacje(stationResponse.data);
+
+      const incidentResponse = await axios.get(
+        "http://localhost:8080/geoserver/prge/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prge%3Apacjenci&maxFeatures=50&outputFormat=application%2Fjson"
+      );
+      console.log(incidentResponse);
+      setIncydenty(incidentResponse.data);
     };
     getData();
   }, []);
@@ -92,9 +100,22 @@ function Map_med() {
             {stacje ? (
               <GeoJSON
                 data={stacje}
-                onEachFeature={makePopup}
+                onEachFeature={makeStationPopup}
                 pointToLayer={(feature, latlng) => {
                   return L.marker(latlng, { icon: stationIcon });
+                }}
+              />
+            ) : (
+              ""
+            )}
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Zgłoszenia WFS">
+            {incydenty ? (
+              <GeoJSON
+                data={incydenty}
+                onEachFeature={makeIncidentPopup}
+                pointToLayer={(feature, latlng) => {
+                  return L.marker(latlng, { icon: incidentIcon });
                 }}
               />
             ) : (
