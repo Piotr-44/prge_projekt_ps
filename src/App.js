@@ -56,8 +56,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const imie = "world";
-
   return (
     <div className="App">
       <RouterProvider router={router} />
