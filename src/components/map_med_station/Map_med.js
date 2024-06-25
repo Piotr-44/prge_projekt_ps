@@ -78,7 +78,7 @@ function Map_med() {
 
     useMapEvent({
       click: (e) => {
-        setPosition(e.latlng); // Ustawienie pozycji markera na kliknięcie mapy
+        setPosition(e.latlng);
       },
     });
   }

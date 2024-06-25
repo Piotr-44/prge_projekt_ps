@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import L from "leaflet";
 import docIconImage from "../tmp/doc_icon.png";
 
-// Definiowanie niestandardowej ikony
 const docIcon = new L.Icon({
   iconUrl: docIconImage,
   iconSize: [20, 27],
