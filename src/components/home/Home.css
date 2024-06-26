@@ -2,7 +2,7 @@
 
 .home {
   width: 99.87vw;
-  height: 99.76vh;
+  height: 99.75vh;
 }
 .backgr {
   width: 100%;
@@ -19,11 +19,11 @@
 
 .title {
   position: absolute;
-  width: 1800px;
+  width: 800px;
   height: 100px;
-  left: 15px;
-  top: 155px;
-  text-align: left;
+  left: 950px;
+  top: 130px;
+  text-align: center;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
