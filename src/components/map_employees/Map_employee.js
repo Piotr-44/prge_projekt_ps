@@ -22,7 +22,8 @@ const docIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-function MapEmployee() {
+function MapEmployee({ isAbout }) {
+  // Dodaj isAbout jako props
   const [pracownicy, setPracownicy] = useState(null);
 
   const makePopup = (feature, layer) => {
@@ -94,9 +95,15 @@ function MapEmployee() {
         </LayersControl>
         <MarkerPlacement />
       </MapContainer>
-      <Link to="/dashboard_employees_list">
-        <img className="employee_list_icon" src={Btn_employee_list}></img>
-      </Link>
+      {!isAbout && (
+        <Link to="/dashboard_employees_list">
+          <img
+            className="employee_list_icon"
+            src={Btn_employee_list}
+            alt="List Icon"
+          />
+        </Link>
+      )}
     </div>
   );
 }

@@ -1,10 +1,7 @@
-.backgr {
-  box-sizing: border-box;
-
+.backgr_map {
+  width: 99.87vw;
+  height: 99.76vh;
   position: relative;
-  width: 1920px;
-  height: 1080px;
-
   background: radial-gradient(
     50% 50% at 50% 50%,
     #ffc150 0%,
@@ -88,8 +85,8 @@
 
 .ambulans {
   position: absolute;
-  width: 649px;
-  height: 430px;
+  width: 549px;
+  height: 330px;
   left: 1153px;
   top: 174px;
   mix-blend-mode: darken;
@@ -98,10 +95,10 @@
 
 .paramedic {
   position: absolute;
-  width: 649.43px;
-  height: 430px;
+  width: 549.43px;
+  height: 330px;
   left: 1153px;
-  top: 626px;
+  top: 540px;
 
   mix-blend-mode: darken;
 }

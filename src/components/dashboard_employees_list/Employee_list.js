@@ -26,7 +26,7 @@ function Employee_list() {
 
   return (
     <div>
-      <div className="backgr">
+      <div className="employee_backgr">
         <div className="incident_list_title">Spis pracowników</div>
         <div className="services_return">
           USŁUGI

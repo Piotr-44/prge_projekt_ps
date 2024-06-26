@@ -1,15 +1,11 @@
 .backgr2 {
   box-sizing: content-box;
-
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding-top: 150px;
-
   position: relative;
-
   background: radial-gradient(
     50% 50% at 50% 50%,
     #ffc150 0%,
@@ -85,4 +81,11 @@
 
 .employee_list_icon2:hover {
   background: radial-gradient(circle, #ffffff 20%, transparent 75%);
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
 }

@@ -14,6 +14,19 @@
   color: #000000;
 }
 
+.services_backgr {
+  width: 99.87vw;
+  height: 99.76vh;
+  position: relative;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffc150 0%,
+    #fae6c3 50.5%,
+    #ffa500 100%
+  );
+  border: 1px solid #000000;
+}
+
 .btn_map {
   position: absolute;
   width: 245px;

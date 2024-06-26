@@ -25,7 +25,7 @@ function Med_station_list() {
 
   return (
     <div>
-      <div className="backgr">
+      <div className="stations_backgr">
         <div className="station_list_title">Spis stacji pogotowia</div>
         <div className="services_return">
           USŁUGI

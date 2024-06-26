@@ -24,7 +24,7 @@ function Incident_list() {
 
   return (
     <div>
-      <div className="backgr">
+      <div className="incidents_backgr">
         <div className="incident_list_title">Spis zgłoszonych incydentów</div>
         <div className="services_return">
           USŁUGI
