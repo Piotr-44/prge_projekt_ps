@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Services() {
   return (
     <div>
-      <div className="backgr">
+      <div className="services_backgr">
         <div className="services">Dostępne usługi</div>
         <Link to="/maps">
           <img className="btn_map" src={Btn_map} btn_map></img>

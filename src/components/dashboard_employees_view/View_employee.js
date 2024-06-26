@@ -82,17 +82,18 @@ function Dashboard() {
             <img className="employee_list_icon2" src={Btn_employee_list}></img>
           </Link>
         </div>
-
-        {input_list.map((item) => {
-          return (
-            <ActionAreaCard
-              name={item.name}
-              surname={item.surname}
-              content={item.content}
-              image={item.image}
-            />
-          );
-        })}
+        <div className="card_container">
+          {input_list.map((item) => {
+            return (
+              <ActionAreaCard
+                name={item.name}
+                surname={item.surname}
+                content={item.content}
+                image={item.image}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Maps() {
   return (
     <div>
-      <div className="backgr">
+      <div className="backgr_map">
         <div className="maps_title">
           Spis dostępnych map
           <div className="maps_subtitle_1">
